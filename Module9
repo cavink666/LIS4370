@@ -12,12 +12,12 @@ Firms <- New$Firms
 States <- New$States
 
 hist(Firms)
-hist(Firms, col = "purple", main = "States with Equipment", )
+hist(Firms, col = "purple", main = "States with Equipment")
 hist(States, main = "States with Equipment", ylab = "Firms", ylim = c(0,1350), col = "darkmagenta")
-barplot(States, main = "States with Equipment", ylab = "Firms", ylim = c(0,1350), xlim = c(1,30), col = "darkmagenta")
-barplot(Firms, main = "States with Equipment", ylab = "Firms", ylim = c(50,1500), xlab = "States", col = "darkmagenta")
+barplot(States, main = "States with Equipment", ylab = "Firms", ylim = c(0,1350), xlim = c(1,30), col = "green")
+barplot(Firms, main = "States with Equipment", ylab = "Equipment", ylim = c(50,1500), xlab = "States", col = "green")
 boxplot(Firms)
-boxplot(Firms~States, data = New, main = "States with Equipment", xlab = "States", ylab = "Firms")
+boxplot(Firms~States, data = New, main = "States with Equipment", xlab = "States", ylab = "Equipment")
 plot(New)
 ggplot(New, aes(x=States, y=Firms)) + geom_point(size = 3) + geom_segment(aes(x=States, xend=States, y=0, yend=Firms)) +
   labs(title = "States with Equipment", caption = "source:Vincent Arel Bundock dataset list") +
